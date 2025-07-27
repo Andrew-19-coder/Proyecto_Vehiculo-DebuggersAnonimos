@@ -10,21 +10,15 @@ package SistemaLuces;
  */
 public class Luz {
     protected boolean encendida;
-    protected String ubicacion;
 
-    public Luz(String ubicacion) {
+    public Luz() {
         this.encendida = false;
-        this.ubicacion = ubicacion;
     }
 
     public boolean isEncendida() {
         return encendida;
     }
 
-    public String getUbicacion() {
-        return ubicacion;
-    }
-    
     public void encenderLuz(){
         this.encendida = true;
     }
