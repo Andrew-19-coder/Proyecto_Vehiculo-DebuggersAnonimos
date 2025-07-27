@@ -2,15 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Sistema_Control_Puertas;
+package SistemaPuertas;
 
 /**
  *
  * @author Joan
  */
 public class Puerta {
-     private boolean abierta;
+    private boolean abierta;
 
+    public Puerta() {
+        this.abierta = false;
+    }
+    
     public void abrir() {
         abierta = true;
     }
@@ -19,7 +23,7 @@ public class Puerta {
         abierta = false;
     }
 
-    public boolean estaAbierta() {
+    public boolean isAbierta() {
         return abierta;
     }
 }
