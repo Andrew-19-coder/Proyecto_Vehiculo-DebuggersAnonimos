@@ -13,6 +13,7 @@ APAGADO,
 LENTO,
 MEDIO,
 RAPIDO
+
 }
  
 
