@@ -11,4 +11,5 @@ package SistemaCinturones;
 public enum RolPersona {
     CONDUCTOR,
     PASAJERO;
+    
 }
