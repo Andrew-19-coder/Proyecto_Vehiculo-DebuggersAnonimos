@@ -50,4 +50,5 @@ public class AlarmaBloqueo {
     public boolean isPuertasBloqueadas(){
         return puertasBloqueadas;
     }
+    
 }
