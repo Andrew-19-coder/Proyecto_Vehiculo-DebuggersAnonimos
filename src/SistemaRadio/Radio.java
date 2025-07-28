@@ -9,30 +9,30 @@ package SistemaRadio;
  * @author Joan
  */
 public class Radio {
-    private boolean encendida;
+    private boolean encendido;
     private ModoRadio modoActual;
-    private double frecuencia; // Solo para AM/FM
+    private double frecuencia;
 
     public Radio() {
-        this.encendida = false;
+        this.encendido = false;
         this.modoActual = ModoRadio.FM;
         this.frecuencia = 99.5;
     }
 
     public void encender() {
-        encendida = true;
+        encendido = true;
     }
 
     public void apagar() {
-        encendida = false;
+        encendido = false;
     }
 
     public boolean estaEncendida() {
-        return encendida;
+        return encendido;
     }
 
     public void cambiarModo(ModoRadio nuevoModo) {
-        if (encendida) {
+        if (encendido) {
             this.modoActual = nuevoModo;
             if (nuevoModo == ModoRadio.AM) {
                 frecuencia = 820; 
@@ -53,19 +53,19 @@ public class Radio {
     }
 
     public void subirFrecuencia() {
-        if (encendida && (modoActual == ModoRadio.AM || modoActual == ModoRadio.FM)) {
+        if (encendido && (modoActual == ModoRadio.AM || modoActual == ModoRadio.FM)) {
             frecuencia += (modoActual == ModoRadio.AM) ? 10 : 0.2;
         }
     }
 
     public void bajarFrecuencia() {
-        if (encendida && (modoActual == ModoRadio.AM || modoActual == ModoRadio.FM)) {
+        if (encendido && (modoActual == ModoRadio.AM || modoActual == ModoRadio.FM)) {
             frecuencia -= (modoActual == ModoRadio.AM) ? 10 : 0.2;
         }
     }
 
     public String obtenerEstado() {
-        if (!encendida) {
+        if (!encendido) {
             return "Radio apagada";
         }
 
@@ -76,4 +76,3 @@ public class Radio {
         }
     }
 } 
-

@@ -16,11 +16,11 @@ public class Puerta {
     }
     
     public void abrir() {
-        abierta = true;
+        this.abierta = true;
     }
 
     public void cerrar() {
-        abierta = false;
+        this.abierta = false;
     }
 
     public boolean isAbierta() {
