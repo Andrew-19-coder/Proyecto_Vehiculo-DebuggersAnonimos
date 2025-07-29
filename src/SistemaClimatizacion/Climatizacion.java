@@ -78,5 +78,16 @@ public class Climatizacion {
     public boolean isCalefaccionEncendida() {
         return calefaccionEncendida;
     }
+
+    public void setTemperatura(int temperatura) {
+        if (temperatura >= 16 && temperatura <= 30) {
+        this.temperatura = temperatura;
+    }
+    }
+    
+    
+    
 }
+
+
 

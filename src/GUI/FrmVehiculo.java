@@ -21,6 +21,7 @@ public class FrmVehiculo extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         CardLayout layout = new CardLayout();
         panelContenedor.setLayout(layout);
+        PanelClimatizacion panelClimatizacion = new PanelClimatizacion();
         
         PanelDefault vacio = new PanelDefault();
         PanelLuces panelLuces = new PanelLuces();
@@ -29,6 +30,7 @@ public class FrmVehiculo extends javax.swing.JFrame {
         panelContenedor.add(vacio, "DEFAULT");
         panelContenedor.add(encendido, "ENCENDIDO");
         panelContenedor.add(panelLuces, "LUZ");
+        panelContenedor.add(panelClimatizacion, "clima");
         
         panelSistemas.setVisible(false);
     }
@@ -51,7 +53,7 @@ public class FrmVehiculo extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        btnClima = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         btnMotor = new javax.swing.JToggleButton();
         panelContenedor = new javax.swing.JPanel();
@@ -103,10 +105,15 @@ public class FrmVehiculo extends javax.swing.JFrame {
         jButton6.setText("Radio");
         jButton6.setBorder(null);
 
-        jButton7.setBackground(new java.awt.Color(204, 204, 204));
-        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton7.setText("Climatizacion");
-        jButton7.setBorder(null);
+        btnClima.setBackground(new java.awt.Color(204, 204, 204));
+        btnClima.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnClima.setText("Climatizacion");
+        btnClima.setBorder(null);
+        btnClima.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClimaActionPerformed(evt);
+            }
+        });
 
         jButton8.setBackground(new java.awt.Color(204, 204, 204));
         jButton8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -133,7 +140,7 @@ public class FrmVehiculo extends javax.swing.JFrame {
                             .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panelSistemasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnClima, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(69, 69, 69))))
         );
@@ -155,7 +162,7 @@ public class FrmVehiculo extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnClima, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(92, Short.MAX_VALUE))
@@ -233,6 +240,13 @@ public class FrmVehiculo extends javax.swing.JFrame {
         cl2.show(panelContenedor, "LUZ");
     }//GEN-LAST:event_btnLucesActionPerformed
 
+    private void btnClimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClimaActionPerformed
+        CardLayout cl = (CardLayout) panelContenedor.getLayout();
+    cl.show(panelContenedor, "clima");
+    }//GEN-LAST:event_btnClimaActionPerformed
+
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -269,6 +283,7 @@ public class FrmVehiculo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnClima;
     private javax.swing.JButton btnLuces;
     private javax.swing.JToggleButton btnMotor;
     private javax.swing.JButton jButton2;
@@ -276,7 +291,6 @@ public class FrmVehiculo extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
