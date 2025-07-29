@@ -14,11 +14,9 @@ import SistemaClimatizacion.*;
 import SistemaCombustible.*;
 import SistemaSensores.*;
 import SistemaKilometraje.*;
-/**
- *
- * @author itsth
- */
+
 public class Vehiculo {
+    private Motor motor;
     private LuzDelantera luzDelantera;
     private LuzPuerta luzPuerta;
     private LucesIntermitentes luzIntermitente;
@@ -48,7 +46,8 @@ public class Vehiculo {
 
         this.puerta = new Puerta();
         this.controlPuertas = new ControlPuertas();
-
+        
+        this.motor = new Motor();
         this.luzDelantera = new LuzDelantera();
         this.luzPuerta = new LuzPuerta(puerta);
         this.luzIntermitente = new LucesIntermitentes();
@@ -66,6 +65,10 @@ public class Vehiculo {
         this.velocimetro = new Velocimetro();
     }
 
+    public Motor getMotor() {
+        return motor;
+    }
+    
     public LuzDelantera getLuzDelantera() {
         return luzDelantera;
     }

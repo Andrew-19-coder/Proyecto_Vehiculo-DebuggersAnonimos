@@ -14,9 +14,9 @@ public class LucesIntermitentes {
     private Luz emergencia;
 
     public LucesIntermitentes() {
-        izquierda = new Luz();
-        derecha = new Luz();
-        emergencia = new Luz();
+        this.izquierda = new Luz();
+        this.derecha = new Luz();
+        this.emergencia = new Luz();
     }
 
     public void activarIzquierda() {
