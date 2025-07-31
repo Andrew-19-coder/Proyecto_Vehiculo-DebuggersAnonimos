@@ -50,8 +50,8 @@ public class PanelClimatizacion extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         lblTemperatura = new javax.swing.JLabel();
         sliderTemperatura = new javax.swing.JSlider();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnEncender = new javax.swing.JButton();
+        btnApagar = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jSlider1 = new javax.swing.JSlider();
@@ -82,15 +82,15 @@ public class PanelClimatizacion extends javax.swing.JPanel {
         sliderTemperatura.setValue(22);
         add(sliderTemperatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 290, 40));
 
-        jButton1.setBackground(new java.awt.Color(51, 51, 255));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setText("EncenderAC");
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 130, 30));
+        btnEncender.setBackground(new java.awt.Color(51, 51, 255));
+        btnEncender.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnEncender.setText("EncenderAC");
+        add(btnEncender, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 130, 30));
 
-        jButton2.setBackground(new java.awt.Color(255, 51, 51));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton2.setText("ApagarAC");
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 130, 30));
+        btnApagar.setBackground(new java.awt.Color(255, 51, 51));
+        btnApagar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnApagar.setText("ApagarAC");
+        add(btnApagar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 130, 30));
 
         jButton3.setForeground(new java.awt.Color(0, 153, 153));
         jButton3.setText("EncenderCalefaccion");
@@ -116,8 +116,8 @@ public class PanelClimatizacion extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnApagar;
+    private javax.swing.JButton btnEncender;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;

@@ -4,11 +4,17 @@
  */
 package SistemaRadio;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author Joan
  */
 public class Radio {
+
+    public static void addActionListener(ActionListener actionListener) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     private boolean encendido;
     private ModoRadio modoActual;
     private double frecuencia;

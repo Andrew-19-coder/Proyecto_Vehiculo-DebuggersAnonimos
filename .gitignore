@@ -64,3 +64,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,netbeans,java
+src/GUI/icono.png.jpeg
+
+src/GUI/lento.gif
